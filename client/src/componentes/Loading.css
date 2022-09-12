@@ -1,0 +1,10 @@
+.loading-text{
+    color: black;
+    min-height: 970px;
+    letter-spacing: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}

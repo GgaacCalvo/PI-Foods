@@ -1,5 +1,8 @@
+/*background-image: url("https://images.pexels.com/photos/2284166/pexels-photo-2284166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+*/
 .App {
   text-align: center;
+  background-size: 100%; 
 }
 
 .App-logo {
@@ -26,6 +29,7 @@
 
 .App-link {
   color: #61dafb;
+  
 }
 
 @keyframes App-logo-spin {

@@ -1,0 +1,71 @@
+.detail-super{
+    display:flex;
+    background-image: url('https://images.pexels.com/photos/793785/pexels-photo-793785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.detail-view{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    min-height:975px;
+    color: black;
+}
+.detail-container{
+    border: 5px solid black;
+    margin: auto;
+    margin-left: 10px;
+    margin-right:70px;
+    display: flex;
+    padding: 2%;
+    flex-direction: column;
+    background-color: rgba(240, 248, 255, 0.548);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    
+    
+}
+.nav-detail{
+    padding: 2%;
+}
+.detail-info{
+    display: flex;
+    flex-direction: row;
+}
+.detail-1{
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+    color: black;
+    text-decoration: none;
+    
+}
+.detail-2{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+}
+.detail-2 label{
+    
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+.detail-3{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    
+}
+.parrafo{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}

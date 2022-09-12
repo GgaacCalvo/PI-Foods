@@ -1,0 +1,22 @@
+.input-search{
+    padding: 6px;
+    margin: 5px;
+    border:none;
+    border-radius: 4px;
+}
+
+.btnSearch{
+    padding: 7px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    transition: 0.6s;
+    background-color: rgba(58, 170, 173, 0.767);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.btnSearch:hover{
+    background-color: rgb(31, 135, 162);
+    box-shadow: 1px 1px 10px 5px rgb(39, 39, 39);
+}

@@ -1,0 +1,55 @@
+.card{
+    border: 3px solid black;
+    margin: 20px;
+    width: 300px;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 20px;
+    justify-content: center;
+    background-color: rgb(119, 169, 199);
+    color: black;
+    
+    text-decoration: none;
+    
+}
+.healthS{
+    color: #5f5050;
+    font-size: 25px;
+}
+.card-info{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    
+    margin-left: 5%;
+    
+    
+    
+}
+
+.card:hover{
+    opacity: 0.8; 
+    height: 500px;
+    transition-duration: 1s;
+       
+}
+.card-title{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+.diet-li{
+    list-style: none;
+}
+.diets-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.diet-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1% 1% 1% 1%;
+    margin: 3%;
+}
