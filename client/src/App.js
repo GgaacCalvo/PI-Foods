@@ -10,6 +10,11 @@ import { useState } from 'react';
 import { match } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
+
+
+
+
+
 function App() {
   const recetas = useSelector((state) => state.recetasTotales) //o state.recetas
   // const [id, setId] = useState('')

@@ -11,7 +11,7 @@ export const ORDER_BY_SCORE = 'ORDER_BY_SCORE'
 
 export function getRecipes() {
     return function(dispatch){
-        axios.get('http://localhost:3001/api/recipes')
+        axios.get('/api/recipes')
         .then((recipes) => {
             dispatch({
                 type: GET_RECIPES,
@@ -26,7 +26,7 @@ export function getRecipes() {
 
 export function getRecipesName(search) {
     return function(dispatch){
-        axios.get('http://localhost:3001/api/recipes?name=' + search)
+        axios.get('/api/recipes?name=' + search)
         .then((recipes) => {
             dispatch({
                 type: GET_RECIPESNAME,
@@ -41,7 +41,7 @@ export function getRecipesName(search) {
 
 export function getDiets() {
     return function (dispatch) {
-        axios.get('http://localhost:3001/api/diets')
+        axios.get('/api/diets')
         .then((diets) => {
             dispatch({
                 type: GET_DIETS,
@@ -56,7 +56,7 @@ export function getDiets() {
 
  export function postRecipe(payload){
      return async function (dispatch) {
-         const receta = await axios.post('http://localhost:3001/api/recipes', payload)
+         const receta = await axios.post('/api/recipes', payload)
          dispatch({
              type: POST_RECIPE,
          })
@@ -81,7 +81,7 @@ export function getDiets() {
 
 export function getRecipeDetail(id) {
     return function (dispatch) { // aca agregue el /api que me faltaba por eso no me traia los detail
-        axios.get(`http://localhost:3001/api/recipes/${id}`)
+        axios.get(`/api/recipes/${id}`)
         .then(receta => 
             dispatch({
                 type: GET_DETAIL,
