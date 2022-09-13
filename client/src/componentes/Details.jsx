@@ -62,7 +62,7 @@ export function Details(){
                         </span>
                             <label>STEPS: 
                             </label>
-                                <p >{detalles.steps && detalles.steps.map(el => el + " ")}</p>                       
+                                <p >{detalles.steps && detalles.steps.slice(" ")}</p>                       
                         </div>
                     </div>
                     

@@ -9,29 +9,45 @@ export  function Search() {
     let dispatch = useDispatch();
 
 
-const recipes = useSelector((state) => state.recipes)
+const recipes = useSelector((state) => state.recetas)
 
-    const onSubmit =  async (e) => {
+    const onSubmit =  (e) => {
         e.preventDefault()
-        if(!search.trim()){
-            return alert("Please insert a valid food name")
-        } else {
-            await dispatch(getRecipesName(search.trim())) 
-            setSearch('')  
+        validate()
+         if(!search.trim()){
+             return alert("Please insert a valid food name")
+         } else {
+            dispatch( getRecipesName(search.trim()))  
+            
+            // if (recipes.length == 0) {
+            //     alert ('SORRY, we couldnt find a recipe with that food')
+            // } 
+            console.log(recipes)
+            //VER PORQUE NO ME ESPERA EL DISPATCH             
+            setSearch('') 
             
             
         }
     }
+    const validate = () => {
+        if(!search.trim()){
+            return alert("Please insert a valid food name")
+        } 
+        // if (!recipes) {
+        //     return alert ('SORRY, we couldnt find a recipe with that food')
+        //  } 
+    }
 function onInputChange(e) {
     //e.preventDefault()
     setSearch(e.target.value)
+    
 }
 
     return <div>
-        <form onSubmit={onSubmit}>
+        
             <input className='input-search' type="text" placeholder="Search your recipe" onChange={onInputChange} value={search}/>
-            <input className="btnSearch" type="submit" value="SEARCH"/>
-        </form>
+            <button className="btnSearch" type="submit" onClick={onSubmit}>SEARCH</button>
+            
     </div>
 }
 
