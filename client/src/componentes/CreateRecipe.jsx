@@ -175,7 +175,7 @@ export function CreateRecipe() {
                           <select className="input-newrecipe"
                               
                               onChange={(e) => handleSelect(e)}>
-                                <option key="asdasd" value="choise">Select type of Diets</option>
+                                <option key="asdasd" hidden value="choise">Select type of Diets</option>
                               {diets?.map((d, index) => (
                                   <option key={index} value={d.name}>{d.name}</option>
                               ))}

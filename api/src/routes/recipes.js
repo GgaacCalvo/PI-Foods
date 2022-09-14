@@ -81,22 +81,18 @@ router.get('/', async (req, res, next) => {
 })
 
 
-router.get('/:idReceta', async (req, res, next) => {
-    
+router.get('/:idReceta', async (req, res, next) => {    
     const {idReceta} = req.params;
-    const recipesTotales = await getAllRecipeTotal();
-    
+    const recipesTotales = await getAllRecipeTotal();    
     try {
-        if(idReceta) { 
-                    
+        if(idReceta) {                     
             let receta = recipesTotales.find(e => e.id == idReceta)           
             if(receta){
                 res.status(200).json(receta) 
             } else {
                 res.status(404).send({message: 'La receta no existe'})       
             }
-        }
-            
+        }            
     } catch (error) {
         next(error)
     }
@@ -120,7 +116,6 @@ router.post('/', async (req, res, next) =>{
         })
 
         newRecipe.addDiets(dietsDb)
-
 
         res.status(200).send({message: 'La dieta fue creada correctamente'})
     } catch (error) {

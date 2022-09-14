@@ -63,7 +63,7 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 console.log(sequelize.models)
 
-console.log("falta ver si no encuentra la receta el buscador que tire algo")
+
 
 const { Recipes, Diets } = sequelize.models;
 
