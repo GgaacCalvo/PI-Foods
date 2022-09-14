@@ -14,33 +14,21 @@ const recipes = useSelector((state) => state.recetas)
     const onSubmit =  (e) => {
         e.preventDefault()
         validate()
-         if(!search.trim()){
-             return alert("Please insert a valid food name")
-         } else {
+        if(!search.trim()){
+            return alert("Please insert a valid food name")
+        } else {
             dispatch( getRecipesName(search.trim()))  
-            
-            // if (recipes.length == 0) {
-            //     alert ('SORRY, we couldnt find a recipe with that food')
-            // } 
-            console.log(recipes)
-            //VER PORQUE NO ME ESPERA EL DISPATCH             
-            setSearch('') 
-            
-            
+            console.log(recipes)           
+            setSearch('')     
         }
     }
     const validate = () => {
         if(!search.trim()){
             return alert("Please insert a valid food name")
-        } 
-        // if (!recipes) {
-        //     return alert ('SORRY, we couldnt find a recipe with that food')
-        //  } 
+        }         
     }
 function onInputChange(e) {
-    //e.preventDefault()
-    setSearch(e.target.value)
-    
+    setSearch(e.target.value)    
 }
 
     return <div>

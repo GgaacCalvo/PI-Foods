@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import {NavBar} from './componentes/NavBar';
-import {Cards} from './componentes/Cards';
+import {Home} from './componentes/Home';
 import {Search} from './componentes/Search';
 import { Details } from './componentes/Details';
 import { CreateRecipe } from './componentes/CreateRecipe';
@@ -25,7 +25,7 @@ function App() {
    
       <Switch>
         <Route exact path="/home">                    
-          <Cards/>         
+          <Home/>         
         </Route>
         <Route exact path="/">
           <Landing/>

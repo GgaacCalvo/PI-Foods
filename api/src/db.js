@@ -62,9 +62,8 @@ sequelize.models = Object.fromEntries(capsEntries);
 // Para relacionarlos hacemos un destructurinng
 
 console.log(sequelize.models)
-console.log("falta modificar diets en modelos")
-console.log("falta ver si no encuentra la receta el buscador que tire algo")
 
+console.log("falta ver si no encuentra la receta el buscador que tire algo")
 
 const { Recipes, Diets } = sequelize.models;
 

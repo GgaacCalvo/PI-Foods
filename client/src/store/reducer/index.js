@@ -12,7 +12,7 @@ const reducer = (state = initialState, action) => {
         case GET_RECIPES:
           return {
             ...state,
-            // chequear que este array no este de mas
+            
             recetasTotales: action.payload,
             recetas: action.payload
           }
@@ -75,9 +75,8 @@ const reducer = (state = initialState, action) => {
                   })
               }
           };
-
-      default:
-        return state;
+          default:
+            return state;
     }
   };
   

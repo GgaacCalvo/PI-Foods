@@ -1,5 +1,5 @@
 import axios from 'axios';
-// import dispatch from ''
+
 export const GET_RECIPES = 'GET_RECIPES'
 export const GET_RECIPESNAME = 'GET_RECIPESNAME'
 export const GET_DIETS = 'GET_DIETS'
@@ -63,24 +63,10 @@ export function getDiets() {
          return receta;
      }
  }
-// export function postRecipe(payload){
-//     return function (dispatch) {
-//         axios.post('http://localhost:3001/api/recipes', payload)
-//         .then((res) => {
-//             dispatch({
-//                 type: POST_RECIPE,
-//             })
-//             return res
-//         })
-        
-//     }
-// }
-
-
 
 
 export function getRecipeDetail(id) {
-    return function (dispatch) { // aca agregue el /api que me faltaba por eso no me traia los detail
+    return function (dispatch) { 
         axios.get(`/api/recipes/${id}`)
         .then(receta => 
             dispatch({
@@ -91,8 +77,7 @@ export function getRecipeDetail(id) {
         .catch(err => {
             console.log(err)
         })
-    }
-    
+    }    
 }
 
 export function filterRecipesByDiet(payload) {
@@ -117,6 +102,8 @@ export function orderByScore(payload) {
         payload,
     }
 }
+
+
   
 
 

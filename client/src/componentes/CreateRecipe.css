@@ -185,3 +185,20 @@ textarea{
     color: red;
     margin: 0%;
 }
+.contains-diet-newrecipe{
+    display: flex;
+    flex-direction: row;
+    font-size:medium;
+    align-items: center;
+    list-style:none
+}
+.list-diet{
+    list-style:none
+    
+}
+.delete-diet-newrecipe{
+    margin: 2%;
+    height: 30px;
+    align-items: center;
+
+}

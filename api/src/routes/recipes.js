@@ -81,44 +81,15 @@ router.get('/', async (req, res, next) => {
 })
 
 
-
-
-
-
-//  router.get('/', async (req, res, next) => {
-//     const {name} = req.query;
-//     let recipesApi = await axios.get('https://api.spoonacular.com/recipes/complexSearch?apiKey=46f0e3f7ba3c4b4bb200877d5c39c792') 
-    
-//     console.log(recipesApi.data.results)
-    
-//     if(!name){
-//         const recipes = await Recipes.findAll()
-//         const fullRecipes = [...recipesApi, ...recipes];
-//         return res.json(fullRecipes)
-//     } 
-//     const recipes = await Recipes.findAll({
-//          where: {
-//             name: {
-//                 [Op.like]: `%${name}%`
-//             }
-//          }
-//      }) 
-//      if(!recipes) return 'No disponemos de esta receta, lo sentimos' 
-
-//     return res.status(200).json(recipes)
-//  })
-
 router.get('/:idReceta', async (req, res, next) => {
-    // aca falta agregar que muestre la join table con el {include:}
+    
     const {idReceta} = req.params;
     const recipesTotales = await getAllRecipeTotal();
     
     try {
         if(idReceta) { 
-            // modificar esta busqueda para que directamente haga la busqeuda del ID en particular, agregarlo al final de la api key, mm igual funciona como esta... reveer
-                      
-            let receta = recipesTotales.find(e => e.id == idReceta)
-            
+                    
+            let receta = recipesTotales.find(e => e.id == idReceta)           
             if(receta){
                 res.status(200).json(receta) 
             } else {

@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getRecipeDetail } from "../store/actions";
+import { getRecipeDetail, cleanDetail } from "../store/actions";
 import "./Details.css"
 import { Loading } from "./Loading";
 import { NavBar } from "./NavBar";
@@ -12,17 +12,15 @@ export function Details(){
     
     let dispatch = useDispatch();
     useEffect(() => {
-        dispatch(getRecipeDetail(id))
+        dispatch(getRecipeDetail(id))       
     }, [id, dispatch])
    
     let contenido = detalles.summary;
     let texto = '';
     if(contenido) {
-
         texto = contenido.replace(/<[^>]*>?/g, '');
     }
-    return (
-        
+    return (        
         <div className="detail-super">
             <div className="nav-detail">
               <NavBar/>
@@ -44,7 +42,6 @@ export function Details(){
                             <span>{detalles.diets && detalles.diets.map(el => el + ", ")}</span>
                             <label> DISHTYPES: </label>
                             <span>{detalles.dishTypes && detalles.dishTypes.map(el => el + ", ")}</span>
-
                         </div>
                         <div className="detail-3">
                             <label> SUMMARY: </label>
@@ -64,8 +61,7 @@ export function Details(){
                             </label>
                                 <p >{detalles.steps && detalles.steps.slice(" ")}</p>                       
                         </div>
-                    </div>
-                    
+                    </div>           
                 </div>
             </div>
             }

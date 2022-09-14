@@ -58,7 +58,7 @@ export function CreateRecipe() {
           ...input,
           [e.target.name]: e.target.value  //va tomando el nombre de cada prop, me vaya llenando el estado
       })
-      setError(                          //form
+      setError(                          
           validate({
               ...input,
               [e.target.name]: e.target.value,  
@@ -79,7 +79,7 @@ export function CreateRecipe() {
           alert("Your recipe needs a name")
       } else if (recipes.find( (e) => e.name.toLowerCase() === input.name.toLowerCase())) {
           alert(`The name ${input.name} already exist, please choose another one!`) 
-      }  else if (!input.summary) {
+      } else if (!input.summary) {
           alert("Your recipe needs a summary")
       } else if (!input.healthScore || input.healthScore < 1 || input.healthScore > 100) {
           alert("Please insert a valid healthscore")
@@ -89,7 +89,7 @@ export function CreateRecipe() {
           alert("Please add at least one diet!")
       }
       else {
-          dispatch(postRecipe(input))          //
+          dispatch(postRecipe(input))          
           alert('Receta creada con éxito')
           setInput({                            
               name: "",
@@ -175,6 +175,7 @@ export function CreateRecipe() {
                           <select className="input-newrecipe"
                               
                               onChange={(e) => handleSelect(e)}>
+                                <option key="asdasd" value="choise">Select type of Diets</option>
                               {diets?.map((d, index) => (
                                   <option key={index} value={d.name}>{d.name}</option>
                               ))}

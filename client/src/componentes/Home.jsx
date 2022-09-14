@@ -6,12 +6,12 @@ import {Card} from './Card'
 import {Search} from './Search'
 import { Paginado } from "./Paginado";
 import { useState } from "react";
-import "./Cards.css"
+import "./Home.css"
 import { NavBar } from "./NavBar";
 import { Loading } from "./Loading";
 
 
-export function Cards(){
+export function Home(){
      let recetas = useSelector((state) => state.recetas) // esto es para traer el state, se puede poner como parametro de la funcion y acceder desde match.state.props (creo que hay que importar esto, es para funciones de clases)
      
      const dietasTotales = useSelector((state) => state.dietas) // aca me traigo todas las dietas del state
@@ -30,7 +30,7 @@ export function Cards(){
         setCurrentPage(pageNumber)
     }
 
-     //hacer que traiga esa info cada vez que se renderice el componente(LifeCycle) con el hook useEffect (vivan los hooks!)
+     
      useEffect(() => {
          dispatch(getRecipes())
          dispatch(getDiets())

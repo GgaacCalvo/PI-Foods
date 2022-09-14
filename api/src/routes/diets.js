@@ -5,8 +5,7 @@ const router = Router();
 
 
 router.get('/', async (req, res, next) => {
-    const dietas = [
-        'ovo vegetarian',
+    const dietas = [       
         'vegan',
         'pescetarian',
         'paleolithic',
@@ -15,8 +14,7 @@ router.get('/', async (req, res, next) => {
         'whole 30',
         'gluten free',
         'ketogenic',
-        'vegetarian',
-        'lacto vegetarian',
+        'vegetarian',        
         'lacto ovo vegetarian'
     ];
     
