@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Lora:ital,wght@0,700;1,400&display=swap');
+
 .contenedor-home{
     height: auto;
     min-height: 1000px;
@@ -37,6 +39,14 @@
     letter-spacing: 0.5rem;
     transition-duration: 0.5s;
     
+}
+.msjpre{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Lora', serif;
+    width: auto;
+    height: 70px;
+    font-weight: bold;
+    font-style: italic;
 }
 .select-home{
     padding: 6px;
