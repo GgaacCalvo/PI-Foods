@@ -19,7 +19,7 @@ router.get('/', async (req, res, next) => {
     ];
     
     try {
-        await dietas.forEach((diet) => {
+        dietas.forEach((diet) => {
             Diets.findOrCreate({
                 where: {
                     name: diet
@@ -28,7 +28,7 @@ router.get('/', async (req, res, next) => {
         })
         
         const allDiets = await Diets.findAll();
-        console.log(allDiets)
+        
         res.status(200).send(allDiets)
     } catch (error) {
         next(error)

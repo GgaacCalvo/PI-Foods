@@ -17,12 +17,13 @@
     position: absolute;
     background-color: rgba(240, 248, 255, 0.719);
     border-radius: 10px;
-    padding: 2% 7% 2% 7%;
+    padding: 2% 2% 2% 2%;
     margin-top: 2%;
     font-weight: bolder;
     align-items: center;
     justify-content: center;
     box-shadow: 5px 5px 10px 10px rgb(24, 97, 99);
+    border-radius: 50%;
 }
 .title-landing{
     margin: 0;
@@ -52,3 +53,7 @@
     
 }
 
+.home-icon{
+   height: 80px;
+    
+}

@@ -30,10 +30,10 @@ export function Home(){
         setCurrentPage(pageNumber)
     }
 
-     
-     useEffect(() => {
-         dispatch(getRecipes())
-         dispatch(getDiets())
+    
+    useEffect(() => {
+        dispatch(getRecipes())
+        dispatch(getDiets())
         }, [dispatch])
         
         
@@ -50,6 +50,7 @@ export function Home(){
     function handleDiets(e) {
         e.preventDefault()
         dispatch(filterRecipesByDiet(e.target.value));
+        setCurrentPage(1)
     }
     
     function handleReset(e) {
@@ -57,9 +58,8 @@ export function Home(){
         window.location.reload(); //refresh (f5)
         
     }
-
-
     return (
+        
         <div className="contenedor-home">
             <div className="contenedor-pag">
 

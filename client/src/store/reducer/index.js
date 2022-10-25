@@ -1,4 +1,4 @@
-import { GET_RECIPES, GET_RECIPESNAME, GET_DIETS, POST_RECIPE, GET_DETAIL, ORDER_BY_SCORE, ORDER_BY_NAME, FILTER_BY_DIET } from "../actions";
+import { GET_RECIPES, GET_RECIPESNAME, GET_DIETS, POST_RECIPE, GET_DETAIL, ORDER_BY_SCORE, ORDER_BY_NAME, FILTER_BY_DIET, CLEAN_DETAIL } from "../actions";
 
 
 const initialState = {
@@ -55,6 +55,11 @@ const reducer = (state = initialState, action) => {
                 recetas: [...state.recetas].sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1))
               }
             }
+          case CLEAN_DETAIL:
+            return {
+              ...state,
+              detail: []
+            }  
           case ORDER_BY_SCORE:
             if (action.payload === 'low') {
               return {

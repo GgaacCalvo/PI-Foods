@@ -11,3 +11,4 @@ const router = Router();
 router.use('/recipes', recipeMiddleware);
 router.use('/diets', dietMiddleware);
 module.exports = router;
+

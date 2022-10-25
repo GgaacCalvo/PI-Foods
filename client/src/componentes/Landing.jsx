@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import "./Landing.css"
 import video from "../imagenes/landing.mp4" 
+import home from ".././imagenes/home.png"
 
 export function Landing(){
     
@@ -14,9 +15,10 @@ export function Landing(){
             </div>
             
             <div className="start">
-                <h2 className="title-landing">Are you ready to cook?</h2>           
                 <Link to="/home">     
-                    <button className="button">Start!</button>
+                <img className="home-icon" src={home}/>
+                {/* <h2 className="title-landing">Are you ready to cook?</h2>            */}
+                    {/* <button className="button">Start!</button> */}
                 </Link>
             </div>
         </div>

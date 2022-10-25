@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getRecipeDetail } from "../store/actions";
+import { getRecipeDetail, cleanDetail } from "../store/actions";
 import "./Details.css"
 import { Loading } from "./Loading";
 import { NavBar } from "./NavBar";
@@ -12,7 +12,10 @@ export function Details(){
     
     let dispatch = useDispatch();
     useEffect(() => {
-        dispatch(getRecipeDetail(id))                     
+        dispatch(getRecipeDetail(id))   
+        return () => {
+            dispatch(cleanDetail())
+        }                  
     }, [id, dispatch])
    
     let contenido = detalles.summary;

@@ -8,6 +8,7 @@ export const GET_DETAIL = 'GET_DETAIL'
 export const FILTER_BY_DIET = 'FILTER_BY_DIET'
 export const ORDER_BY_NAME = 'ORDER_BY_NAME'
 export const ORDER_BY_SCORE = 'ORDER_BY_SCORE'
+export const CLEAN_DETAIL = 'CLEAN_DETAIL'
 
 export function getRecipes() {
     return function(dispatch){
@@ -80,6 +81,12 @@ export function getRecipeDetail(id) {
     }    
 }
 
+export function cleanDetail() {
+    return {
+        type: CLEAN_DETAIL
+    }
+}
+
 export function filterRecipesByDiet(payload) {
     return {
       type: FILTER_BY_DIET,
@@ -87,9 +94,7 @@ export function filterRecipesByDiet(payload) {
     }
 }
 
-export function orderByName(payload) {  
-    
-    
+export function orderByName(payload) {      
     return {
         type: ORDER_BY_NAME,
         payload,

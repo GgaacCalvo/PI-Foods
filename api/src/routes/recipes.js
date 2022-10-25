@@ -4,9 +4,6 @@ const axios = require('axios');
 const { API_KEY } = process.env;
 
 
-
-
-
 const router = Router();
 
 const getInfoApiFood = async () => {
@@ -121,6 +118,13 @@ router.post('/', async (req, res, next) =>{
     } catch (error) {
         next(error)
     }
+})
+
+router.delete('/:id', async (req, res, next) => {
+    let {id} = req.params;
+    const recetas = await getInfoAPiDb()
+    let receta = recetas.find(e => e === e.id)
+    
 })
 
 module.exports = router;
