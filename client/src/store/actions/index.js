@@ -12,7 +12,7 @@ export const CLEAN_DETAIL = 'CLEAN_DETAIL'
 
 export function getRecipes() {
     return function(dispatch){
-        axios.get('/api/recipes')
+        axios.get('/recipes')
         .then((recipes) => {
             dispatch({
                 type: GET_RECIPES,
@@ -27,7 +27,7 @@ export function getRecipes() {
 
 export function getRecipesName(search) {
     return function(dispatch){
-        axios.get('/api/recipes?name=' + search)
+        axios.get('/recipes?name=' + search)
         .then((recipes) => {
             dispatch({
                 type: GET_RECIPESNAME,
@@ -42,7 +42,7 @@ export function getRecipesName(search) {
 
 export function getDiets() {
     return function (dispatch) {
-        axios.get('/api/diets')
+        axios.get('/diets')
         .then((diets) => {
             dispatch({
                 type: GET_DIETS,
@@ -57,7 +57,7 @@ export function getDiets() {
 
  export function postRecipe(payload){
      return async function (dispatch) {
-         const receta = await axios.post('/api/recipes', payload)
+         const receta = await axios.post('/recipes', payload)
          dispatch({
              type: POST_RECIPE,
          })
@@ -68,7 +68,7 @@ export function getDiets() {
 
 export function getRecipeDetail(id) {
     return function (dispatch) { 
-        axios.get(`/api/recipes/${id}`)
+        axios.get(`/recipes/${id}`)
         .then(receta => 
             dispatch({
                 type: GET_DETAIL,
