@@ -24,7 +24,7 @@ server.use(morgan('dev'));
    next();
  });
 
-server.use('/api', routes);
+server.use('/', routes);
 
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
